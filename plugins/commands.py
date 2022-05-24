@@ -140,7 +140,7 @@ async def start(bot, message):
                 InlineKeyboardButton("Help 🍂", callback_data="help"),
                 InlineKeyboardButton("About Bot 🌿", callback_data="about")
                 ],[
-                InlineKeyboardButton("➕ Add me To Your Group ➕", url="http://t.me/@Films_Sinhala_Sub_bot?startgroup=True")
+                InlineKeyboardButton("➕ Add me To Your Group ➕", url="http://t.me/Films_Sinhala_Sub_bot?startgroup=True")
                 ]]
             )
         )
