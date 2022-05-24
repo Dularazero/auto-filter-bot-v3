@@ -31,8 +31,8 @@ async def answer(bot, query):
     if AUTH_CHANNEL and not await is_subscribed(bot, query):
         await query.answer(results=[],
                            cache_time=0,
-                           switch_pm_text='You have to subscribe my channel to use the bot',
-                           switch_pm_parameter="subscribe")
+                           switch_pm_text='බොට්ව පාවිච්ච් කරන්න අපෙ චැනල් එකට ජොඉන් වෙන්න.❤️',
+                           switch_pm_parameter="Join Here")
         return
 
     results = []
@@ -104,8 +104,8 @@ async def answer(bot, query):
 
 def get_reply_markup(query):
     buttons = [[
-        InlineKeyboardButton('👨‍💻 Developer', url=f'{DEV_CHANNEL}'),
-        InlineKeyboardButton('Search again 🔍', switch_inline_query_current_chat=query)
+        InlineKeyboardButton('Discussion 💃', url=f't.me/mpmchatzone'),
+        InlineKeyboardButton('නැවත සොයන්න. 🔍', switch_inline_query_current_chat=query)
         ]]
     return InlineKeyboardMarkup(buttons)
 

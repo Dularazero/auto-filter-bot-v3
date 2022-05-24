@@ -64,7 +64,7 @@ async def start(bot, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("📢 Join Updates Channel 📢", url=invite_link.invite_link)
+                                InlineKeyboardButton("📢 Join Our Channel 📢", url=invite_link.invite_link)
                             ],
                             [
                                 InlineKeyboardButton("🔄 Try Again", callback_data=f"checksub#{file_id}")
@@ -134,13 +134,13 @@ async def start(bot, message):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[
-                InlineKeyboardButton("🔎 Search Here", switch_inline_query_current_chat=''),
+                InlineKeyboardButton("සොයන්න 🔎", switch_inline_query_current_chat=''),
                 InlineKeyboardButton("Go Inline 🗣️", switch_inline_query='')
                 ],[
-                InlineKeyboardButton("🖲️ Commands", callback_data="help"),
-                InlineKeyboardButton("About Bot 🧑‍🔧", callback_data="about")
+                InlineKeyboardButton("Help 🍂", callback_data="help"),
+                InlineKeyboardButton("About Bot 🌿", callback_data="about")
                 ],[
-                InlineKeyboardButton("🤖 More Bots @BotzListBot 🤖", url="https://t.me/BotzListBot")
+                InlineKeyboardButton("➕ Add me To Your Group ➕", url="http://t.me/@Films_Sinhala_Sub_bot?startgroup=True")
                 ]]
             )
         )
@@ -353,8 +353,8 @@ async def bot_info(bot, message):
     buttons = [
         [
             
-            InlineKeyboardButton('👨‍💻 Developer', url=f'{DEV_CHANNEL}'),
-            InlineKeyboardButton('Channel 📢', url=f'https://t.me/TGBotsProJect')
+            InlineKeyboardButton('Film Group 😊', url=f't.me/Wahtsappgang'),
+            InlineKeyboardButton('Discussion 💃', url=f'https://t.me/mpmchatzone')
         ]
         ]
     await message.reply(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)

@@ -43,11 +43,11 @@ async def filter(client, message):
         except UserNotParticipant:
             await client.send_message(
                 chat_id=message.from_user.id,
-                text="**Please Join My Updates Channel to use this Bot!**",
+                text="**අපෙ චැනල් එකට ජොඉන් වෙලා බොට් ව පාවිච්ච් කරන්න. 😓**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 Join Updates Channel 📢", url=invite_link.invite_link)
+                            InlineKeyboardButton("Join Channel 📢", url=invite_link.invite_link)
                         ]
                     ]
                 ),
@@ -67,7 +67,7 @@ async def filter(client, message):
     if 2 < len(message.text) < 100:    
         btn = []
         search = message.text
-        zaute_km = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**📤 Uploaded by {message.chat.title}**"
+        zaute_km = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}"
         files = await get_filter_results(query=search)
         if files:
             for file in files:
@@ -77,7 +77,7 @@ async def filter(client, message):
                     [InlineKeyboardButton(text=f"{filename}",callback_data=f"zautekm#{file_id}")]
                     )
         else:
-            await client.send_sticker(chat_id=message.from_user.id, sticker='CAADBQADcAIAAgNqQVet7IusN5nq9hYE')
+            await client.send_sticker(chat_id=message.from_user.id, sticker='CAACAgIAAxkBAAEEz6hijJETy4wzcFr6Si1n9StE4z4wIwACRxYAAmVxaEjnhfGbgJFrXiQE')
             return
 
         if not btn:
@@ -129,7 +129,7 @@ async def group(client, message):
     if 2 < len(message.text) < 50:    
         btn = []
         search = message.text
-        zaute_km = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}\n**📤 Uploaded by {message.chat.title}**"
+        zaute_km = f"**🗂️ Title:** {search}\n**⭐ Rating:** {random.choice(RATING)}\n**🎭 Genre:** {random.choice(GENRES)}"
         nyva=BOT.get("username")
         if not nyva:
             botusername=await client.get_me()
@@ -291,8 +291,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "help":
             buttons = [
                 [
-                    InlineKeyboardButton('👨‍💻 Developer', url=f'{DEV_CHANNEL}'),
-                    InlineKeyboardButton('Channel 📢', url=f'https://t.me/TGBotsProJect')
+                    InlineKeyboardButton('Film Group 😊', url=f't.me/Wahtsappgang'),
+                    InlineKeyboardButton('Discussion 💃', url=f'https://t.me/mpmchatzone')
                 ]
                 ]
             await query.message.edit(text=f"{HELP}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
@@ -300,8 +300,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('👨‍💻 Developer', url=f'{DEV_CHANNEL}'),
-                    InlineKeyboardButton('Channel 📢', url=f'https://t.me/TGBotsProJect')
+                    InlineKeyboardButton('Film Group 😊', url=f't.me/Wahtsappgang'),
+                    InlineKeyboardButton('Discussion 💃', url=f'https://t.me/mpmchatzone')
                 ]
                 ]
             await query.message.edit(text=f"{ABOUT}", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
@@ -324,8 +324,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('👨‍💻 Developer', url=f'{DEV_CHANNEL}'),
-                        InlineKeyboardButton('Channel 📢', url=f'https://t.me/TGBotsProJect')
+                        InlineKeyboardButton('Film Group 😊', url=f't.me/Wahtsappgang'),
+                        InlineKeyboardButton('Discussion 💃', url=f'https://t.me/mpmchatzone')
                     ]
                     ]
                 
@@ -356,8 +356,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('👨‍💻 Developer', url=f'{DEV_CHANNEL}'),
-                        InlineKeyboardButton('Channel 📢', url=f'https://t.me/TGBotsProJect')
+                        InlineKeyboardButton('Film Group 😊', url=f't.me/Wahtsappgang'),
+                        InlineKeyboardButton('Discussion 💃', url=f'https://t.me/mpmchatzone')
                     ]
                     ]
                 
