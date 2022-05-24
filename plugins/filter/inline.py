@@ -32,7 +32,7 @@ async def answer(bot, query):
         await query.answer(results=[],
                            cache_time=0,
                            switch_pm_text='බොට්ව පාවිච්ච් කරන්න අපෙ චැනල් එකට ජොඉන් වෙන්න.❤️',
-                           switch_pm_parameter="Join Here")
+                           switch_pm_parameter="subscribe")
         return
 
     results = []
@@ -104,8 +104,8 @@ async def answer(bot, query):
 
 def get_reply_markup(query):
     buttons = [[
-        InlineKeyboardButton('Discussion 💃', url=f'https://t.me/mpmchatzone'),
-        InlineKeyboardButton('නැවත සොයන්න. 🔍', switch_inline_query_current_chat=query)
+        InlineKeyboardButton('👨‍💻 Developer', url=f'{DEV_CHANNEL}'),
+        InlineKeyboardButton('Search again 🔍', switch_inline_query_current_chat=query)
         ]]
     return InlineKeyboardMarkup(buttons)
 
