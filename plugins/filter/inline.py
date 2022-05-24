@@ -104,7 +104,7 @@ async def answer(bot, query):
 
 def get_reply_markup(query):
     buttons = [[
-        InlineKeyboardButton('Discussion 💃', url=f't.me/mpmchatzone'),
+        InlineKeyboardButton('Discussion 💃', url=f?t.me/mpmchatzone'),
         InlineKeyboardButton('නැවත සොයන්න. 🔍', switch_inline_query_current_chat=query)
         ]]
     return InlineKeyboardMarkup(buttons)
