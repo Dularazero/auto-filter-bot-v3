@@ -60,11 +60,11 @@ async def start(bot, message):
                 ident, file_id = message.text.split("_-_-_-_")
                 await bot.send_message(
                     chat_id=message.from_user.id,
-                    text="**Please Join My Updates Channel to use this Bot!**",
+                    text="**බොට්ව පාවිච්ච් කරන්න අපෙ චැනල් එකට ජොඉන් වෙන්න.❤️**",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("📢 Join Our Channel 📢", url=invite_link.invite_link)
+                                InlineKeyboardButton("Join Our Channel 📢", url='https://t.me/+BsmK3Rh3RWgwMjA1')
                             ],
                             [
                                 InlineKeyboardButton("🔄 Try Again", callback_data=f"checksub#{file_id}")
@@ -99,11 +99,11 @@ async def start(bot, message):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('Search again', switch_inline_query_current_chat=''),
-                        InlineKeyboardButton('More Bots', url='https://t.me/BotzListBot')
+                        InlineKeyboardButton('නැවත සොයන්න. 🔍', switch_inline_query_current_chat=''),
+                        InlineKeyboardButton('Film Group 😊', url='https://t.me/watsappgang')
                     ],
                     [
-                        InlineKeyboardButton('👨‍💻 Developer @ZauteKm 📢', url=f'{DEV_CHANNEL}')
+                        InlineKeyboardButton('Discussion 💃', url=f't.me/mpmchatzone')
                     ]
                     ]
                 await bot.send_cached_media(
@@ -118,11 +118,11 @@ async def start(bot, message):
         invite_link = await bot.create_chat_invite_link(int(AUTH_CHANNEL))
         await bot.send_message(
             chat_id=message.from_user.id,
-            text="**Please Join My Updates Channel to use this Bot!**",
+            text="**බොට්ව පාවිච්ච් කරන්න අපෙ චැනල් එකට ජොඉන් වෙන්න.❤️**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Join Updates Channel 📢", url=invite_link.invite_link)
+                        InlineKeyboardButton("Join Our Channel 📢", url='https://t.me/+BsmK3Rh3RWgwMjA1')
                     ]
                 ]
             )
